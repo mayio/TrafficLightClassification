@@ -27,17 +27,16 @@ from object_detection.utils import visualization_utils as vis_util
 
 # Path to frozen detection graph. This is the actual model that is used for the object detection.
 # Simulation
-"""
-MODEL_NAME = 'frozen-ssd_mobilenet-simulation'
+MODEL_NAME = 'frozen-ssd_inception-simulation'
 PATH_TO_FROZEN_GRAPH = MODEL_NAME + '/frozen_inference_graph.pb'
 
 # List of the strings that is used to add correct label for each box.
 PATH_TO_LABELS = os.path.join('data', 'udacity_label_map.pbtxt')
 
 PATH_TO_TEST_IMAGES_DIR = 'test_images/simulation'
-PATH_TO_TEST_IMAGES_OUTPUTDIR = 'test_images_results/simulation/mobilenet'
-"""
+PATH_TO_TEST_IMAGES_OUTPUTDIR = 'test_images_results/simulation/inception'
 
+"""
 # REAL
 MODEL_NAME = 'frozen-ssd_inception-real-udacity'
 PATH_TO_FROZEN_GRAPH = MODEL_NAME + '/frozen_inference_graph.pb'
@@ -48,6 +47,7 @@ PATH_TO_LABELS = os.path.join('data', 'udacity_label_map.pbtxt')
 PATH_TO_TEST_IMAGES_DIR = 'data/udacity_testarea_rgb'
 #PATH_TO_TEST_IMAGES_DIR = '/mnt/bigdata/BoschTrafficLightsConverted/train'
 PATH_TO_TEST_IMAGES_OUTPUTDIR = 'test_images_results/real/ssd_inception'
+"""
 
 # Load a (frozen) Tensorflow model into memory.
 detection_graph = tf.Graph()
